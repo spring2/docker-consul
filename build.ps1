@@ -1,3 +1,6 @@
-$build="2"
-docker -H vdc-qasapptst02 build -t spring2/consul:$build .
-docker -H vdc-qasapptst02 tag spring2/consul:$build spring2/consul:latest
+$build="0.7.3"
+docker build -t spring2/consul:$build .
+docker tag spring2/consul:$build spring2/consul:latest
+
+docker push spring2/consul:$build
+docker push spring2/consul:latest
